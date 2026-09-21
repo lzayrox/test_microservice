@@ -1,0 +1,688 @@
+﻿<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Clase: Atributos de Calidad, Microservicios, Malla de Servicios y CI/CD</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/monokai.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- Portada -->
+        <section>
+          <h2>Arquitectura de Software</h2>
+          <h4>Atributos de Calidad · Microservicios · Malla de Servicios · CI/CD</h4>
+          <p>Profesor: Daniel J. Romero</p>
+        </section>
+
+        <!-- Atributos de Calidad -->
+        <section>
+          <h3>Atributos de Calidad</h3>
+          <ul>
+            <li>Disponibilidad</li>
+            <li>Escalabilidad</li>
+            <li>Mantenibilidad</li>
+            <li>Seguridad</li>
+            <li>Rendimiento</li>
+            <li>Usabilidad</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Ejemplo aplicado</h3>
+          <p><b>Banca en línea:</b> Seguridad, Disponibilidad y Rendimiento.</p>
+          <p><b>Plataforma educativa:</b> Usabilidad y Escalabilidad.</p>
+        </section>
+
+        <!-- Microservicios -->
+        <section>
+          <h3>Microservicios</h3>
+          <ul>
+            <li>Servicios pequeños e independientes</li>
+            <li>Comunicación por APIs REST o mensajería</li>
+            <li>Escalabilidad horizontal</li>
+            <li>Base de datos independiente por servicio</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Ventajas y Retos</h3>
+          <p><b>Ventajas:</b> Escalabilidad, menor acoplamiento, despliegue ágil</p>
+          <p><b>Retos:</b> Comunicación compleja, monitoreo, transacciones distribuidas</p>
+         
+        </section>
+
+       
+
+
+        <!-- CI/CD -->
+        <section>
+          <h3>CI/CD</h3>
+          <p><b>Integración Continua (CI):</b> pruebas automáticas en cada commit.</p>
+          <p><b>Despliegue Continuo (CD):</b> entrega automática en ambientes.</p>
+          <p>Herramientas: GitHub Actions, GitLab CI, Jenkins, Azure DevOps.</p>
+        </section>
+
+         <!-- 1. Spring Boot & Node.js -->
+        <section>
+          <h3>Spring Boot</h3>
+          <ul>
+            <li>Framework de Java para construir microservicios.</li>
+            <li>Incluye servidor embebido (Tomcat/Jetty).</li>
+           
+          </ul>
+          <p><b>Importancia:</b> productividad, escalabilidad y ecosistema robusto.</p>
+        </section>
+
+        <section>
+          <h3>Node.js</h3>
+          <ul>
+            <li>Entorno de ejecución de JavaScript en servidor.</li>
+            <li>Basado en <b>event loop</b> y <b>I/O no bloqueante</b>.</li>
+            <li>Ideal para aplicaciones en tiempo real y APIs ligeras.</li>
+          </ul>
+          <h4>Discusión:</h4>
+          <p>¿Cuándo usarías Spring Boot vs Node.js?</p>
+        </section>
+
+        <section>
+  <h3>Otros lenguajes fuertes para Microservicios</h3>
+  <ul>
+    <li><b>Go (Golang):</b> alto rendimiento, concurrencia nativa, ideal para sistemas distribuidos.</li>
+    <li><b>.NET Core (C#):</b> multiplataforma, soporte empresarial, integración con Azure.</li>
+    <li><b>Python (FastAPI, Flask):</b> rápido para prototipos, APIs REST/ML, fácil de aprender.</li>
+    <li><b>Rust:</b> rendimiento tipo C/C++, seguridad de memoria, excelente para servicios críticos.</li>
+   
+  </ul>
+ 
+  <p>¿Qué lenguaje elegirías para construir un sistema de microservicios de alto tráfico?</p>
+</section>
+
+        <!-- 2. Patrones SOA -->
+        <section>
+          <h3>Patrones SOA útiles</h3>
+          <ol>
+            <li>Service Façade</li>
+            <li>Service Broker</li>
+            <li>Service Composition</li>
+            <li>Service Registry</li>
+            <li>Service Discovery</li>
+            <li>Service Gateway</li>
+          </ol>
+        </section>
+
+        
+        <!-- 3. Kubernetes & Service Mesh -->
+        <section>
+          <h3>Kubernetes</h3>
+          <ul>
+            <li>Orquestador de contenedores.</li>
+            <li>Gestiona despliegues, escalado y recuperación.</li>
+            <li>Trabaja con pods, nodos y clusters.</li>
+          </ul>
+        </section>
+
+         <!-- Malla de Servicios -->
+        <section>
+          <h3>Malla de Servicios</h3>
+          <p>Capa de infraestructura para gestionar la comunicación entre microservicios.</p>
+          <ul>
+            <li>Balanceo de carga</li>
+            <li>Seguridad (mTLS)</li>
+            <li>Observabilidad</li>
+            <li>Resiliencia</li>
+            <li>Herramientas: Istio, Linkerd.</li>
+          </ul>
+        </section>
+
+
+        <!-- 4. Contenedores vs VMs -->
+        <section>
+          <h3>Contenedores vs Máquinas Virtuales</h3>
+          <table>
+            <tr><th>Contenedores</th><th>Máquinas Virtuales</th></tr>
+            <tr><td>Ligeros, rápidos, comparten kernel</td><td>Aíslan totalmente, más pesadas</td></tr>
+            <tr><td>Ideales para microservicios</td><td>Útiles para aplicaciones legadas</td></tr>
+            <tr><td>Arranque en segundos</td><td>Arranque en minutos</td></tr>
+          </table>
+        </section>
+
+        <!-- 5. Almacenamiento de Datos -->
+        <section>
+          <h3>Opciones de Almacenamiento</h3>
+          <ul>
+            <li><b>BD transaccionales (SQL):</b> integridad, ACID. Ej: PostgreSQL, MySQL</li>
+            <li><b>NoSQL:</b> flexibilidad, escalabilidad. Ej: MongoDB, Cassandra</li>
+            <li><b>Data Warehouses:</b> análisis y BI. Ej: Snowflake, BigQuery</li>
+            <li><b>In-memory:</b> alta velocidad. Ej: Redis, Memcached</li>
+          </ul>
+        </section>
+
+        <!-- 6. Servidores -->
+        <section>
+          <h3>Apache, Tomcat y Nginx</h3>
+          <ul>
+            <li><b>Apache HTTP:</b> servidor web modular y flexible.</li>
+            <li><b>Tomcat:</b> servidor de aplicaciones Java EE ligero.</li>
+            <li><b>Nginx:</b> proxy inverso, alta concurrencia y balanceo.</li>
+          </ul>
+          <p> <b>Comparación:</b> Apache (web), Tomcat (Java), Nginx (proxy/balanceo).</p>
+        </section>
+
+        <!-- 7. API Manager y Balanceadores -->
+        <section>
+          <h3>API Manager</h3>
+          <ul>
+            <li>Centraliza, publica y protege APIs.</li>
+            <li>Gestiona autenticación, cuotas y versiones.</li>
+            <li>Ejemplos: Apigee, Kong, WSO2.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Balanceadores de Carga</h3>
+          <ul>
+            <li>Distribuyen tráfico entre múltiples instancias.</li>
+            <li>Funciones: Round Robin, Least Connections, Health checks.</li>
+            <li>Proveedores: HAProxy, Nginx, AWS ELB, Azure LB, GCP LB.</li>
+          </ul>
+          
+        </section>
+
+       
+
+        
+
+
+        <section>
+  <h2>Roadmap paso a paso</h2>
+  <ol>
+    <li>Descubrir el dominio y dividir en servicios (DDD)</li>
+    <li>Diseñar contratos (OpenAPI) y políticas cross-cutting</li>
+    <li>Crear skeletons (Spring Boot / Node.js)</li>
+    <li>Persistencia: DB por servicio </li>
+    <li>Empaquetar en Docker</li>
+    <li>CI/CD → build, test, image, deploy</li>
+    <li>Kubernetes: Deployments/Services/Ingress</li>
+    <li>Service Mesh: mTLS, retries, observabilidad</li>
+    <li>API Gateway / Rate limiting / Authn/Authz</li>
+    <li>Observabilidad: logs, métricas, trazas</li>
+  </ol>
+</section>
+
+<!-- 1. DDD & Contratos -->
+<section>
+  <h3>1) DDD + Contratos</h3>
+  <ul>
+    <li>Identifica <b>bounded contexts</b> y separa modelos por servicio.</li>
+    <li>Define APIs con <b>OpenAPI</b>, versiona (<code>/v1</code>), y usa <b>contract tests</b>.</li>
+    
+  </ul>
+
+</section>
+
+ <section>
+        <h2>¿Qué es DDD?</h2>
+        <p>
+          Domain-Driven Design es una forma de diseñar software
+          que pone el <b>negocio</b> en el centro.
+        </p>
+        <ul>
+          <li>Se enfoca en el <b>dominio</b> (reglas del negocio).</li>
+          <li>Usa un <b>lenguaje común</b> entre negocio y técnicos.</li>
+          <li>Divide el sistema en <b>Bounded Contexts</b>.</li>
+        </ul>
+      </section>
+
+      <!-- Conceptos clave -->
+      <section>
+        <h2>Conceptos clave</h2>
+        <ul>
+          <li><b>Dominio:</b> el problema que el software resuelve.</li>
+          <li><b>Lenguaje ubicuo:</b> palabras claras y compartidas.</li>
+          <li><b>Bounded Context:</b> límite donde un modelo es válido.</li>
+        </ul>
+      </section>
+
+      <!-- Bounded Context -->
+      <section>
+        <h2>Bounded Context (BC)</h2>
+        <p>
+          Un BC es un límite claro donde un modelo de dominio 
+          aplica de manera consistente.
+        </p>
+        <ul>
+          <li>Cada BC tiene su propio modelo y lógica.</li>
+          <li>Comunican entre sí vía APIs o eventos.</li>
+          <li>Ejemplo: "Orders", "Payments", "Shipping".</li>
+        </ul>
+      </section>
+
+      <!-- Context Map -->
+      <section>
+        <h2>¿Qué es un Context Map?</h2>
+        <p>
+          Es un <b>mapa visual</b> que muestra:
+        </p>
+        <ul>
+          <li>Los Bounded Contexts (cajitas).</li>
+          <li>Sus relaciones y dependencias.</li>
+          <li>Cómo se comunican (APIs, eventos).</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>¿Qué es Contract-First?</h2>
+        <p>
+          Es un enfoque donde primero se define el <b>contrato de la API</b> 
+          (ej. OpenAPI, AsyncAPI, GraphQL SDL) 
+          antes de escribir código.
+        </p>
+      </section>
+
+      <!-- Comparación -->
+      <section>
+        <h2>Contract-First vs Code-First</h2>
+        <table>
+          <tr>
+            <th>Contract-First</th>
+            <th>Code-First</th>
+          </tr>
+          <tr>
+            <td>Contrato se diseña primero</td>
+            <td>Código se escribe primero</td>
+          </tr>
+          <tr>
+            <td>Equipos acuerdan el contrato antes</td>
+            <td>Contrato se genera del código</td>
+          </tr>
+          <tr>
+            <td>Mejor comunicación entre equipos</td>
+            <td>Rápido para prototipos</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- Ejemplo OpenAPI -->
+      <section>
+        <h2>Ejemplo OpenAPI (YAML)</h2>
+        <pre><code class="yaml">
+openapi: 3.0.1
+info:
+  title: Orders API
+  version: 1.0.0
+paths:
+  /orders:
+    post:
+      summary: Crear pedido
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Order'
+      responses:
+        '201':
+          description: Pedido creado
+components:
+  schemas:
+    Order:
+      type: object
+      properties:
+        id:
+          type: string
+        total:
+          type: number
+        items:
+          type: array
+          items:
+            type: string
+        </code></pre>
+      </section>
+
+      <!-- Beneficios -->
+      <section>
+        <h2>Beneficios</h2>
+        <ul>
+          <li>Lenguaje común entre equipos.</li>
+          <li>APIs diseñadas de forma clara y consistente.</li>
+          <li>Facilita pruebas automáticas (mock servers, validators).</li>
+          <li>Permite generar código cliente y servidor.</li>
+        </ul>
+      </section>
+
+      <!-- Herramientas -->
+      <section>
+        <h2>Herramientas útiles</h2>
+        <ul>
+          <li><b>OpenAPI</b> → REST APIs.</li>
+          <li><b>AsyncAPI</b> → eventos/mensajería.</li>
+          <li><b>GraphQL SDL</b> → contratos GraphQL.</li>
+          <li>Codegen: <b>Swagger Codegen, OpenAPI Generator</b>.</li>
+          <li>Mock servers: <b>Prism, Postman, Stoplight</b>.</li>
+        </ul>
+      </section>
+
+      <!-- Cierre -->
+      <section>
+        <h2>Resumen</h2>
+        <ul>
+          <li>Primero el contrato, luego el código.</li>
+          <li>Mejor alineación entre negocio y tecnología.</li>
+          <li>Ideal cuando hay múltiples equipos y dependencias.</li>
+        </ul>
+        <p><b>Contract-First = APIs más claras y confiables </b></p>
+      </section>
+
+
+<!-- 2. Skeleton Node.js -->
+<section>
+  <h3>2) Skeleton: Node.js (Express)</h3>
+  <pre><code class="language-javascript">// app.js
+// Minimal REST service with health checks
+const express = require("express");
+const app = express();
+app.use(express.json());
+
+app.get("/health", (_req, res) => res.status(200).json({ status: "ok" }));
+app.get("/v1/orders/:id", (req, res) => {
+  // TODO: fetch order by id (repository)
+  res.json({ id: req.params.id, status: "CREATED" });
+});
+
+const port = process.env.PORT || 8080;
+app.listen(port, () => console.log(`Orders up on :${port}`));</code></pre>
+</section>
+<section>
+
+  <pre><code class="language-dockerfile"># Dockerfile (Node)
+FROM node:20-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+COPY . .
+EXPOSE 8080
+CMD ["node", "app.js"]</code></pre>
+</section>
+
+<!-- 3. Skeleton Spring Boot -->
+<section>
+  <h3>3) Skeleton: Spring Boot</h3>
+  <pre><code class="language-java">// OrdersController.java
+@RestController
+@RequestMapping("/v1/orders")
+public class OrdersController {
+  @GetMapping("/{id}")
+  public ResponseEntity&lt;OrderDto&gt; get(@PathVariable String id) {
+    return ResponseEntity.ok(new OrderDto(id, "CREATED"));
+  }
+}
+
+class OrderDto {
+  public String id; public String status;
+  public OrderDto(String id, String status){ this.id=id; this.status=status; }
+}</code></pre>
+</section>
+<section>
+  <pre><code class="language-yaml"># application.yml
+server:
+  port: 8080
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus</code></pre>
+
+
+  <pre><code class="language-dockerfile"># Dockerfile (Spring Boot JAR preconstruido)
+FROM eclipse-temurin:21-jre-alpine
+WORKDIR /app
+COPY target/orders-0.0.1.jar app.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","/app/app.jar"]</code></pre>
+</section>
+
+<!-- 4. Persistencia & Mensajería -->
+<section>
+  <h3>4) Persistencia & Mensajería</h3>
+  <ul>
+    <li><b>DB por servicio</b> (aislamiento + autonomía).</li>
+    <li><b>Outbox pattern</b> para consistencia con eventos.</li>
+    <li><b>Saga (coreografía/orquestación)</b> para transacciones distribuidas.</li>
+  </ul>
+
+</section>
+
+<section>
+          <h3>Pipeline Ejemplo</h3>
+          <pre><code>
+1. Ejecutar pruebas unitarias
+2. Construir imagen Docker
+3. Publicar en Registry
+4. Desplegar en Kubernetes
+          </code></pre>
+          <h4> Actividad:</h4>
+          <p>Diseña un pipeline de CI/CD para un microservicio.</p>
+        </section>
+
+<!-- 5. CI/CD Pipeline -->
+<section>
+  <h3>5) CI/CD (GitHub Actions ejemplo)</h3>
+  <pre><code class="language-yaml"># .github/workflows/ci-cd.yml (extract)
+name: ci-cd
+on: [push]
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: npm ci && npm test
+  docker-publish:
+    needs: build-test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/login-action@v3
+        with: { registry: ghcr.io, username: ${{ github.actor }}, password: ${{ secrets.GITHUB_TOKEN }} }
+      - uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: ghcr.io/org/orders:sha-${{ github.sha }}
+  deploy:
+    needs: docker-publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: azure/setup-kubectl@v4
+      - run: kubectl apply -f k8s/</code></pre>
+</section>
+
+<!-- 6. Kubernetes Manifests -->
+<section>
+  <h3>6) Kubernetes: Deploy & Service</h3>
+  <pre><code class="language-yaml"># k8s/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata: { name: orders }
+spec:
+  replicas: 3
+  selector: { matchLabels: { app: orders } }
+  template:
+    metadata: { labels: { app: orders } }
+    spec:
+      containers:
+        - name: orders
+          image: ghcr.io/org/orders:sha-ABC123
+          ports: [{ containerPort: 8080 }]
+          env:
+            - { name: NODE_ENV, value: "production" }
+          readinessProbe: { httpGet: { path: /health, port: 8080 }, initialDelaySeconds: 3 }
+          livenessProbe: { httpGet: { path: /health, port: 8080 }, initialDelaySeconds: 10 }
+---
+apiVersion: v1
+kind: Service
+metadata: { name: orders }
+spec:
+  selector: { app: orders }
+  ports:
+    - { name: http, port: 80, targetPort: 8080 }</code></pre>
+  <pre><code class="language-yaml"># k8s/ingress.yaml (Nginx Ingress)
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: api
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+spec:
+  rules:
+    - host: api.example.com
+      http:
+        paths:
+          - path: /orders/?(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: orders
+                port: { number: 80 }</code></pre>
+</section>
+
+<!-- 7. Service Mesh (Istio) -->
+<section>
+  <h3>7) Malla de Servicios (Istio)</h3>
+  <ul>
+    <li><b>mTLS</b>, <b>retries</b>, <b>circuit breaking</b>, <b>telemetría</b> sin cambiar el código.</li>
+    <li>Sidecar proxy (Envoy) en cada pod + control plane.</li>
+  </ul>
+  <pre><code class="language-yaml"># DestinationRule + VirtualService (retries)
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata: { name: orders }
+spec:
+  host: orders
+  trafficPolicy:
+    connectionPool: { tcp: { maxConnections: 100 } }
+    outlierDetection: { consecutive5xxErrors: 3, interval: 5s, baseEjectionTime: 30s }
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata: { name: orders }
+spec:
+  hosts: ["orders"]
+  http:
+    - retries: { attempts: 3, perTryTimeout: 2s }
+      route:
+        - destination: { host: orders, subset: v1 }</code></pre>
+</section>
+
+<!-- 8. API Gateway -->
+<section>
+  <h3>8) API Gateway</h3>
+  <ul>
+    <li>Única entrada: routing, auth, rate limiting, CORS.</li>
+    <li>Opciones: Nginx, Kong, Spring Cloud Gateway, Apigee.</li>
+  </ul>
+  <pre><code class="language-yaml"># Kong declarative (extract)
+_format_version: "3.0"
+services:
+- name: orders
+  url: http://orders.default.svc.cluster.local
+  routes:
+  - name: orders-route
+    paths: ["/v1/orders"]
+plugins:
+- name: rate-limiting
+  config: { minute: 120 }</code></pre>
+</section>
+
+<!-- 9. Observabilidad -->
+<section>
+  <h3>9) Observabilidad (O11y)</h3>
+  <ul>
+    <li><b>Métricas</b> (Prometheus/Micrometer), <b>trazas</b> (OpenTelemetry/Jaeger), <b>logs</b> (Loki/ELK).</li>
+    <li>Propaga <code>traceparent</code> / <code>baggage</code> entre servicios.</li>
+  </ul>
+  <pre><code class="language-javascript">// Node: OpenTelemetry auto-instrumentation (example)
+import { NodeSDK } from "@opentelemetry/sdk-node";
+import { OTLPTraceExporter } from "@opentelemetry/exporter-trace-otlp-http";
+new NodeSDK({ traceExporter: new OTLPTraceExporter({ url: process.env.OTLP_URL }) }).start();</code></pre>
+  <pre><code class="language-yaml"># Spring: application.yml (Micrometer + OTLP)
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  otlp:
+    tracing:
+      endpoint: http://otel-collector:4318/v1/traces</code></pre>
+</section>
+
+<!-- 10. Seguridad -->
+<section>
+  <h3>10) Seguridad</h3>
+  <ul>
+    <li><b>OIDC/OAuth2</b> (Keycloak, Cognito, Auth0) para autenticación.</li>
+    <li><b>Scopes/roles</b> por servicio; <b>mTLS</b> en mesh.</li>
+    <li>Secretos en <b>Kubernetes Secrets</b> y rotación periódica.</li>
+  </ul>
+</section>
+
+<!-- 11. Escalabilidad & Despliegue -->
+<section>
+  <h3>11) Escalabilidad & Despliegues</h3>
+  <ul>
+    <li><b>HPA</b> por CPU/RAM/QPS; <b>PodDisruptionBudget</b>.</li>
+    <li>Estrategias: <b>Rolling</b>, <b>Blue/Green</b>, <b>Canary</b> (con Istio/K8s).</li>
+  </ul>
+  <pre><code class="language-yaml"># Horizontal Pod Autoscaler (extract)
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: { name: orders }
+spec:
+  scaleTargetRef: { apiVersion: apps/v1, kind: Deployment, name: orders }
+  minReplicas: 3
+  maxReplicas: 10
+  metrics:
+    - type: Resource
+      resource: { name: cpu, target: { type: Utilization, averageUtilization: 70 } }</code></pre>
+</section>
+
+<!-- 12. Checklist de producción -->
+<section>
+  <h3>12) Checklist de producción</h3>
+  <ul>
+    <li>SLOs/SLIs definidos (latencia, error rate, uptime)</li>
+    <li>Backups, DR, límites de cuota y rate limiting</li>
+    <li>Alertas (SRE): latencia p95/p99, saturación, 5xx</li>
+    <li>Costos bajo control (requests/limits, namespaces)</li>
+  </ul>
+</section>
+
+
+        <!-- Cierre -->
+        <section>
+          <h2>Conclusiones</h2>
+          <ul>
+            <li>Atributos de calidad definen el éxito del sistema</li>
+            <li>Microservicios mejoran escalabilidad, pero aumentan complejidad</li>
+            <li>La malla de servicios facilita seguridad y observabilidad</li>
+            <li>CI/CD acelera la entrega confiable de software</li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+      Reveal.initialize({ hash: true, plugins: [ RevealMarkdown, RevealHighlight ] });
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+  </body>
+</html>
